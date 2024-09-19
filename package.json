@@ -1,0 +1,21 @@
+{
+  "name": "twilight-inn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack watch --mode=development --config webpack.config.js",
+    "prod": "webpack --mode=production --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "William Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}
