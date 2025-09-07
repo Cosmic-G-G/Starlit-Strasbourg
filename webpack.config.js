@@ -14,8 +14,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',  // it's in project_root
-      filename: 'index.html',    // emit into dist/
+      template: path.resolve(__dirname, "index.html"),
+      filename: 'index.html',
     }),
   ],
 };
