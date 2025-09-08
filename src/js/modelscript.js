@@ -3,7 +3,6 @@ import { RGBELoader } from './RGBELoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import space from '../Cover_Assets/cover.hdr';
 import observatory from '../Cover_Assets/observatoryvar.glb';
-import { floor } from 'three/examples/jsm/nodes/Nodes.js';
 
 //RENDERER & SCENE
 const renderer = new THREE.WebGLRenderer();
