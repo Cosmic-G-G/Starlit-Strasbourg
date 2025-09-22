@@ -1,6 +1,14 @@
 import * as THREE from 'three';
-import { RGBELoader } from './RGBELoader';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
+import {
+    GLTFLoader 
+} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {
+    RGBELoader
+} from './RGBELoader';
+import { 
+    DragControls 
+} from './DragControls';
 import space from '../Cover_Assets/cover.hdr';
 import observatory from '../Cover_Assets/observatoryvar.glb';
 
@@ -10,8 +18,8 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById("cover").appendChild( renderer.domElement );
 renderer.setAnimationLoop(animate);
+document.getElementById("cover").appendChild( renderer.domElement );
 const scene = new THREE.Scene();
 scene.environment = null;
 
@@ -36,6 +44,9 @@ new RGBELoader().load(space, function(texture) {
     scene.environment = texture;
 });
 
+//Controls
+const controls = new DragControls( camera, renderer.domElement );
+
 /*
 const floorGeom = new THREE.CircleGeometry(100, 10);
 const mirrorCamRenderTarget = new THREE.WebGLCubeRenderTarget(1024, {generateMipmaps: true, minFilter: THREE.LinearMipmapLinearFilter});
@@ -54,25 +65,27 @@ const clock = new THREE.Clock();
     // let delta = 0.0;
 
 //ANIMATION FUNC
-window.addEventListener('mousemove', function(event){
-    mousePos.x = event.clientX * 2 / this.window.innerWidth - 1;
-    mousePos.y = event.clientY * -2 / this.window.innerHeight + 1;
+// window.addEventListener('pointerdown', function(event){
+//     console.log("Detecting drag");
 
-    const cQuat = new THREE.Quaternion();
-    camera.getWorldQuaternion(cQuat);
+//     mousePos.x = event.clientX * 2 / this.window.innerWidth - 1;
+//     mousePos.y = event.clientY * -2 / this.window.innerHeight + 1;
 
-    let cEuler = new THREE.Euler();
-    cEuler.setFromQuaternion(cQuat, 'YZX');
+//     const cQuat = new THREE.Quaternion();
+//     camera.getWorldQuaternion(cQuat);
 
-    cEuler.x -= event.movementY * 0.3 * Math.PI / 180; // * delta * 30 frame independence 30 FPS
-    cEuler.y -= event.movementX * 0.3 * Math.PI/180;
+//     let cEuler = new THREE.Euler();
+//     cEuler.setFromQuaternion(cQuat, 'YZX');
+
+//     cEuler.x -= event.movementY * 0.3 * Math.PI / 180; // * delta * 30 frame independence 30 FPS
+//     cEuler.y -= event.movementX * 0.3 * Math.PI/180;
     
-    cEuler.x = THREE.MathUtils.clamp(cEuler.x, -90 * Math.PI / 180, 90 * Math.PI / 180);
-    cEuler.y = THREE.MathUtils.clamp(cEuler.y, -3.13, 3.13);
+//     cEuler.x = THREE.MathUtils.clamp(cEuler.x, -90 * Math.PI / 180, 90 * Math.PI / 180);
+//     cEuler.y = THREE.MathUtils.clamp(cEuler.y, -3.13, 3.13);
 
-    camera.setRotationFromEuler(cEuler);
+//     camera.setRotationFromEuler(cEuler);
     
-});
+// });
 window.addEventListener('resize', function() {
     camera.aspect = window.innerWidth/window.innerHeight;
     camera.updateProjectionMatrix();
