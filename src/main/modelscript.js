@@ -9,8 +9,8 @@ import {
 import { 
     DragControls 
 } from './DragControls';
-import space from '../Cover_Assets/cover.hdr';
-import observatory from '../Cover_Assets/observatoryvar.glb';
+import space from './cover.hdr';
+import observatory from './observatoryvar.glb';
 
 //RENDERER & SCENE
 const renderer = new THREE.WebGLRenderer();
