@@ -1,8 +1,2 @@
-node_modules/
-.idea/
-src/
-index.js
-README.md
-package.json
-package-lock.json
-webpack.config.js
+*
+!docs/
