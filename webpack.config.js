@@ -4,7 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   module: {
     rules: [
-      { test: /\.(png|jpe?g|gif|hdr|glb)$/i, use: [{ loader: 'file-loader' }]},
+      {
+        test: /\.(png|jpe?g|gif|hdr|glb)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/[name][hash][ext]"
+        }
+      },
     ],
   },
 
@@ -18,7 +24,7 @@ module.exports = {
     filename: '[name].bundle.js',
     clean: true
   },
-  
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/main/index.html',
@@ -30,5 +36,5 @@ module.exports = {
       filename: 'playground/index.html',
       chunks: ['playground']
     })
-  ], 
+  ],
 };

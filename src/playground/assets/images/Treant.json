@@ -1,0 +1,103 @@
+{
+	"textures": [
+		{
+			"image": "Treant",
+			"format": "RGBA8888",
+			"size": {
+				"w": 80,
+				"h": 336
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "treant_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 84
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 84
+					}
+				},
+				{
+					"filename": "treant_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 84
+					},
+					"frame": {
+						"x": 0,
+						"y": 84,
+						"w": 80,
+						"h": 84
+					}
+				},
+				{
+					"filename": "treant_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 84
+					},
+					"frame": {
+						"x": 0,
+						"y": 168,
+						"w": 80,
+						"h": 84
+					}
+				},
+				{
+					"filename": "treant_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 84
+					},
+					"frame": {
+						"x": 0,
+						"y": 252,
+						"w": 80,
+						"h": 84
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}

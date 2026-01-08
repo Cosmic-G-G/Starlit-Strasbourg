@@ -2,3 +2,5 @@ dist/
 docs/
 node_modules/
 .idea/
+src/playground/assets/index.js
+src/playground/assets/tiled/ruinedpark.tiled-session
