@@ -28,7 +28,6 @@ function preload() {
 
 function create() {
     const parkmap = this.make.tilemap({ key: 'parkmap' });
-    console.log(parkmap);
     parkmap.images.forEach(layer => {
         let parallaxx = layer.properties[0]['value'] ?? 1;
         let parallaxy = layer.properties[1]['value'] ?? 1;
@@ -39,7 +38,7 @@ function create() {
     parkmap.createFromObjects('foreground/tree', { gid: 92, key: 'ParkTree' });
 
     const gndTileset = parkmap.addTilesetImage('ParkGnd', 'ParkGnd');
-    const groundLayer = parkmap.createLayer('ground', gndTileset).setCollisionByExclusion(-1, true);
+    this.groundLayer = parkmap.createLayer('ground', gndTileset);
 
     this.anims.create({
         key: 'player-walk',
@@ -52,7 +51,12 @@ function create() {
         frameRate: 10,
         repeat: -1
     });
-    const player = this.add.sprite(64, 224, 'treant').setFlipX(true).setOrigin(0,1).play('player-walk');; //Automate this?
+    this.player = this.add.sprite(64, 150, 'treant').setFlipX(true).setOrigin(0, 1).play('player-walk'); //Automate this?
+    this.physics.add.existing(this.player, 0);
+
+    this.cameras.main.startFollow(this.player, false, 0.2, 0, -30, 30);
+    this.cameras.main.setDeadzone(35);
+    this.cameras.main.setBounds(0, 0, 2000, 256);
 
     this.anims.create({
         key: 'mech-walk',
@@ -72,10 +76,32 @@ function create() {
 
     // map.createLayer("Ground", tilesets);
 
+    this.physics.add.collider(this.player, this.groundLayer);
+    this.groundLayer.setCollisionBetween(40, 53);
+    this.groundLayer.setCollisionBetween(32, 35);
+
+    this.cursors = this.input.keyboard.createCursorKeys();
 }
 
 function update() {
+    const { left, right, up } = this.cursors;
 
+    if (left.isDown) {
+        this.player.body.setVelocityX(-160);
+    }
+    else if (right.isDown) {
+        this.player.body.setVelocityX(160);
+    }
+    else {
+        this.player.body.setVelocityX(0);
+    }
+    
+    if (up.isDown && this.player.body.blocked.down) {
+        this.player.body.setVelocityY(-330);
+        this.player.body.setGravityY(200);
+    } else if (this.player.body.velocity.y > 0) {
+        this.player.body.setGravityY(300);
+    }
 }
 
 const config = {
@@ -86,6 +112,15 @@ const config = {
         preload: preload,
         create: create,
         update: update,
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: {
+                x: 0,
+                y: 300
+            },
+        },
     },
 };
 
