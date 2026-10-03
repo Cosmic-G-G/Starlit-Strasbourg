@@ -1,0 +1,41 @@
+/* Need wibble wobble!*/
+
+/* overwrites default be careful*/
+body {
+    overflow-x: hidden;
+    background: #0000007a;
+}
+
+.carousel-container {
+    padding: 0;
+    margin: 10px;
+    display: flex;
+}
+
+.carousel-container li {
+    padding: 0;
+    margin: 10px;
+    list-style-type: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(38, 37, 143);
+    opacity: 0.5;
+    zoom: 85%;
+    cursor: pointer;
+    transition: opacity 0.5s, zoom 0.5s;
+    color: #FFFFFF;
+}
+
+.carousel-container .active-page {
+    padding: 0;
+    margin: 10px;
+    opacity: 1;
+    zoom: 120%;
+    transition: opacity 1s, zoom 1s;
+}
+
+.page-content {
+    padding: 0;
+    margin: 25px;
+    color:#FFFFFF;
+}

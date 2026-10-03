@@ -1,6 +1,8 @@
-dist/
-docs/
-node_modules/
 .idea/
-src/playground/assets/index.js
-src/playground/assets/tiled/ruinedpark.tiled-session
+
+dist/
+node_modules/
+
+/**/__*
+
+CODEX_HANDOFF.md
