@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig(({command}) => ({
-    base: '/Starlit-Strasbourg',
+    base: command === 'build' ? '/Starlit-Strasbourg' : '/',
     build: {
         outDir: 'docs',
         rollupOptions: {
