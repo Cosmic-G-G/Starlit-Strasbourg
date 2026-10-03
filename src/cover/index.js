@@ -52,7 +52,7 @@ redwaterBook.addEventListener('mousedown', (event) => {
 
     bookOverlayEl.innerHTML = wikiModuleHTML
     document.body.appendChild(bookOverlayEl);
-    RenderCategoriesUI(`${import.meta.env.BASE_URL}wikis/RETICLE2/`);
+    RenderCategoriesUI(`${import.meta.env.BASE_URL}/wikis/RETICLE2/`);
 
     renderer.setAnimationLoop(null);
 });
@@ -62,13 +62,13 @@ redwaterBook.addEventListener('mouseup', (event) => {
     redwaterBook.removeEventListener('mousedown');
 })
 
-new GLTFLoader().load(`${import.meta.env.BASE_URL}glb/observatoryvar.glb`, (gltf) => {
+new GLTFLoader().load(`${import.meta.env.BASE_URL}/glb/observatoryvar.glb`, (gltf) => {
     const observatory = gltf.scene;
     scene.add(observatory);
     observatory.position.set(0, -20, 30);
     observatory.rotateY(Math.PI * 0.2);
 });
-new RGBELoader().load(`${import.meta.env.BASE_URL}hdr/cover.hdr`, function (texture) {
+new RGBELoader().load(`${import.meta.env.BASE_URL}/hdr/cover.hdr`, function (texture) {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.background = texture;
     scene.environment = texture;
