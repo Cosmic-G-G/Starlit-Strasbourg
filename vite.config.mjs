@@ -5,14 +5,11 @@ export default defineConfig(({command}) => ({
     base: command === 'build' ? 'Starlit-Strasbourg' : '/',
     build: {
         outDir: 'docs',
-
-        //Will use a new branch for vite deployment
         rollupOptions: {
             input: {
                 main: resolve(import.meta.dirname, 'index.html'),
                 playground: resolve(import.meta.dirname, 'playground/index.html'),
             },
-            exclude: ['**/_*'],
         },
     },
 }));

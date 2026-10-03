@@ -1,3 +1,4 @@
+import './wiki.css';
 import { marked } from 'marked';
 
 var $ = selector => {
@@ -49,4 +50,4 @@ export function RenderCategoriesUI(docpath, active_idx = 0, containerRoot = docu
     });
 }
 
-//RenderCategoriesUI("/docs/REDWATER/");
+//RenderCategoriesUI("/wikis/RETICLE2/");

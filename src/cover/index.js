@@ -28,6 +28,8 @@ const interactionManager = new InteractionManager(renderer, camera, renderer.dom
 
 //* Objects -----------------------------------------
 
+const wikiModuleHTML = import.meta.glob('../wiki/wiki.html', {query: '?raw', import: 'default', eager: true})['../wiki/wiki.html'];
+
 const redwaterBook = new THREE.Mesh(
     new THREE.BoxGeometry(2,2,2),
     new THREE.MeshBasicMaterial()
@@ -47,11 +49,10 @@ redwaterBook.addEventListener('mousedown', (event) => {
 
     const bookOverlayEl = document.createElement("div");
     bookOverlayEl.classList.add('book-overlay');
-    fetch('/src/wiki/wiki.html').then(response => response.text()).then(html => {
-        bookOverlayEl.innerHTML = html
-        document.body.appendChild(bookOverlayEl);
-        RenderCategoriesUI("/docs/RETICLE2/");
-    });
+
+    bookOverlayEl.innerHTML = wikiModuleHTML
+    document.body.appendChild(bookOverlayEl);
+    RenderCategoriesUI("/wikis/RETICLE2/");
 
     renderer.setAnimationLoop(null);
 });
