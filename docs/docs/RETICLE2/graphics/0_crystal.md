@@ -1,0 +1,1 @@
+Cube crystals like bismuth are easy to model, low polycount, look good and fit the futuristic theme.
