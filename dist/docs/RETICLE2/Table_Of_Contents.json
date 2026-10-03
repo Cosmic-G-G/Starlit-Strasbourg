@@ -1,9 +1,0 @@
-{
-  "enemy": ["0_hpvariation.md","1_genericRobots.md"],
-  "gamemodes": ["0_vehiclecombat.md"],
-  "gameplay": ["0_controls.md","1_revivemechanic.md"],
-  "graphics": ["0_crystal.md","1_reflection.md"],
-  "overclock": ["1_teamateusage.md"],
-  "quotes": ["0_intercom.md"],
-  "setting": ["1_outfitAesthetic.md"]
-}

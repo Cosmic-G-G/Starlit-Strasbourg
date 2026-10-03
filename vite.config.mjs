@@ -4,6 +4,7 @@ import { resolve } from 'path';
 export default defineConfig(({command}) => ({
     base: command === 'build' ? 'Starlit-Strasbourg' : '/',
     build: {
+        outDir: 'docs',
 
         //Will use a new branch for vite deployment
         rollupOptions: {
