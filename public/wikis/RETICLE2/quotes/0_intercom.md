@@ -1,1 +1,0 @@
-Dialogue mostly through intercom during game missions; there is no interruption to the fun!

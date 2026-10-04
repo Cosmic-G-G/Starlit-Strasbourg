@@ -1,0 +1,7 @@
+Remember when I told you to remember the image? These are some other scene ideas that use the same image. 
+
+1. Reclaiming the city. You extracted the payload but your work isn't done yet. You are re dispatched to the city to destroy research and clean up enemies. This time, your squad is the one in the pods kicking down the door of the pod, guns blazing. 
+
+2. On a dusty plain, the squad enjoys a brief moment of peace, looking at the moons and planets which are much bigger in the sky than on Earth. Then, some comets like an artist's brush on a canvas. This scene doesn't have any story or magic attached, but represents where we want to go with this project- just a small passion
+
+3. **SPOILER WARNING**<details>After Shark's last stand against the Confederate, she lays dying in Matt's arms. We don't get to see Matt's face, but we can see the stars over her head. Camera cut: In the perspective of Shark, we see Matt's teary eyes and the stars overhead. Shark, appreciating the stars, tells Matt to look up, lest she'd miss the view. Camera cut: From Matt's profile, we see her still hunched over Shark, hestating, but turning to look up. Matt's bangs cover her eyes, and her hair covers most of her face except her nose and mouth. She looks up at the same stars Shark is looking at, as the last starlight in Shark's eyes fades away. </details>

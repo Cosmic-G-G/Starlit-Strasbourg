@@ -12,7 +12,7 @@ function RenderCategoryContent(categorypath, pagearray) {
         .then(response => response.text())
         .then(text => {
             const addedEl = document.createElement("div");
-            addedEl.innerHTML = page.endsWith(".md") ? marked.parse(text) : text;
+            addedEl.innerHTML = (page.endsWith(".md") ? marked.parse(text) : text) + '<hr>';
             $('.page-content').appendChild(addedEl);
         });
     });
