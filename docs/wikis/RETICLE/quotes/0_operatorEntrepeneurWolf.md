@@ -1,0 +1,2 @@
+The entrepeneur wolf character is a business man at heart. But despite figuratively and literally being a wolf, he still has a heart to give out for others. After being betrayed by a bad partnership, this is his reaction.  
+<q>I can't cut ties, but I can cut losses</q>  
